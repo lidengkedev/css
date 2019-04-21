@@ -1,0 +1,11 @@
+# mode_modules
+node_modules
+
+# vscode
+.vscode
+
+# project
+.project
+
+# dist
+dist

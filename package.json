@@ -1,0 +1,35 @@
+{
+  "name": "css",
+  "version": "0.0.1",
+  "description": "this is css example.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --inline --progress webpack.config.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "css-loader": "^2.1.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lidengkedev/css.git"
+  },
+  "keywords": [
+    "css",
+    "css3",
+    "html",
+    "html5",
+    "js",
+    "jsvascript"
+  ],
+  "author": "lidengke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lidengkedev/css/issues"
+  },
+  "homepage": "https://github.com/lidengkedev/css#readme"
+}
