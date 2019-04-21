@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+ul,
+li,
+ol,
+a {
+    text-decoration: none;
+    list-style: none;
+}
+/* 标题 */
+.main-head {
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+}
+/* 案例列表 */
+.nav-list {
+    width: 1200px;
+    height: calc(100vh - 42px);
+    margin: 0 auto;
+    background-color: #f8f8f8;
+}
+.nav-item {
+    width: 20%;
+    display: inline-block;
+    line-height: 2.4;
+}
+.nav-link {
+    width: 100%;
+    height: 100%;
+    margin: 5px 5px;
+    border: 1px solid #eaeaea;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    transition-duration: 0.3s;
+    color: #404040;
+}
+.nav-link:hover {
+    border: 1px solid #52ccba;
+    color: #52ccba;
+}

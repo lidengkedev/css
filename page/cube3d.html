@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+	* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .clearfix:after{
+    	content: "";
+    	clear: both;
+    	overflow: hidden;
+    	display: block;
+    	height: 0;
+    }
+
+    .clearfix{
+    	-ms-zoom: 1;
+    }
+	.box{
+		width: 400px;
+		height:400px;
+		position: relative;
+		margin: 200px auto;
+		transition: all 5s;
+		transform-style: preserve-3d;
+	}
+	.box>span{
+		width: 200px;
+		height: 200px;
+		position: absolute;
+		top:50%; 
+		left:50%;
+		margin-top: -100px;
+		margin-left: -100px;
+		text-align: center;
+		line-height: 200px;
+		font-size: 50px;
+		box-sizing: border-box;
+		transition: all 1s;
+	}
+	.box>span:nth-child(1){
+		transform: translateZ(200px);
+		background-color: red;
+	}
+	.box>span:nth-child(2){
+		background-color: blue;
+	}
+	.box>span:nth-child(3){
+		transform: rotateY(-90deg) translateZ(100px) translateX(100px);
+		background-color: orange;
+	}
+	.box>span:nth-child(4){
+		transform: rotateY(90deg) translateZ(100px) translateX(-100px);
+		background-color: pink;
+	}
+	.box>span:nth-child(5){
+		height: 400px;
+		position: absolute;
+	
+		top: 0px;
+		transform: rotateX(90deg);
+
+		background-color: transparent;
+
+	}
+	.box>span:nth-child(6){
+		transform: rotateX(-90deg) translateZ(100px) translateY(-100px);
+		background-color: yellow;
+	}
+	.box>span{
+		transition: all 1s linear;
+		opacity: 0.7;
+	}
+	@keyframes animation{
+		0%{}
+		100%{transform: rotateY(360deg);}
+	}
+	.box{
+		animation: animation 5s infinite linear;
+	}
+	.box:hover span:nth-child(5){
+		transform: rotateX(180deg);
+	}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<span>前</span>
+		<span>后</span>
+		<span>左</span>
+		<span>右</span>
+		<span class="span5"><span style="width: 200px;height: 200px;display: block;"></span>
+		<span style="width: 200px;height: 200px;display: block;background-color: red;">上</span></span>
+		<span>下</span>
+	</div>
+</body>
+</html>
