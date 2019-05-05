@@ -10,8 +10,11 @@
         .r-nav {
             position: fixed;
             right: -1px;
-            top: 200px;
+            top: 100px;
             border: 1px solid #eaeaea;
+        }
+        .r-nav-all {
+            top: 300px;
         }
         .r-nav .n-item {
             position: relative;
@@ -41,8 +44,16 @@
             background-color: #52ccba;
             transition-duration: 1s;
         }
+        .r-nav-all .n-item .n-elem {
+            padding: 0;
+            width: 110px;
+            text-align: left;
+        }
         .r-nav .n-item:hover .n-elem {
             left: -100px;
+        }
+        .r-nav-all .n-item:hover .n-elem {
+            left: -70px;
         }
         .r-nav .n-item .sort {
             position: relative;
@@ -52,6 +63,11 @@
             color: #fff;
             z-index: 1;
             background-color: #52ccba;
+        }
+        .r-nav-all .n-item .sort {
+            width: 40px;
+            height: 100%;
+            text-align: center;
         }
     </style>
 </head>
@@ -64,6 +80,16 @@
             <li class="n-item"><a href="javascript:void(0);" class="n-elem">导航菜单</a><span class="sort">4</span></li>
             <li class="n-item"><a href="javascript:void(0);" class="n-elem">导航菜单</a><span class="sort">5</span></li>
             <li class="n-item"><a href="javascript:void(0);" class="n-elem">导航菜单</a><span class="sort">6</span></li>
+        </ul>
+    </div>
+    <div class="container">
+        <ul class="r-nav r-nav-all">
+            <li class="n-item"><a href="javascript:void(0);" class="n-elem"><span class="sort">1</span>导航菜单</a></li>
+            <li class="n-item"><a href="javascript:void(0);" class="n-elem"><span class="sort">2</span>导航菜单</a></li>
+            <li class="n-item"><a href="javascript:void(0);" class="n-elem"><span class="sort">3</span>导航菜单</a></li>
+            <li class="n-item"><a href="javascript:void(0);" class="n-elem"><span class="sort">4</span>导航菜单</a></li>
+            <li class="n-item"><a href="javascript:void(0);" class="n-elem"><span class="sort">5</span>导航菜单</a></li>
+            <li class="n-item"><a href="javascript:void(0);" class="n-elem"><span class="sort">6</span>导航菜单</a></li>
         </ul>
     </div>
 </body>
