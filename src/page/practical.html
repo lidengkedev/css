@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不常用，但非常实用的CSS样式</title>
+    <style>
+        .css-warpper {
+            width: 90%;
+            margin: 0 auto;
+            font-size: 14px;
+        }
+        .css-inner {
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f8f8f8;
+        }
+        p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="css-warpper">
+        <div class="css-inner">
+            <div 
+                class="css-item" 
+                title="中文摘要是科技论文的点睛之笔.目前科技论文的摘要往往存在三类主要问题,即研究背景性内容过多,没有研究目的及内容抽象空洞.修改此类摘要,首先要全面掌握文章主旨,然后运用一定的写作经验,对引言,正文及结果结论中的中心语句加以提炼,便可形成一篇既独立于全文又能全面概括其主要内容的摘要."
+                style="
+                    width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                ">
+                中文摘要是科技论文的点睛之笔.目前科技论文的摘要往往存在三类主要问题,即研究背景性内容过多,没有研究目的及内容抽象空洞.修改此类摘要,首先要全面掌握文章主旨,然后运用一定的写作经验,对引言,正文及结果结论中的中心语句加以提炼,便可形成一篇既独立于全文又能全面概括其主要内容的摘要.
+            </div>
+        </div>
+        <div class="css-inner">
+            块容器 中的内容限制为指定的行数:
+            <div 
+                class="css-item" 
+                title="中文摘要是科技论文的点睛之笔.目前科技论文的摘要往往存在三类主要问题,即研究背景性内容过多,没有研究目的及内容抽象空洞.修改此类摘要,首先要全面掌握文章主旨,然后运用一定的写作经验,对引言,正文及结果结论中的中心语句加以提炼,便可形成一篇既独立于全文又能全面概括其主要内容的摘要.中文摘要是科技论文的点睛之笔.目前科技论文的摘要往往存在三类主要问题,即研究背景性内容过多,没有研究目的及内容抽象空洞.修改此类摘要,首先要全面掌握文章主旨,然后运用一定的写作经验,对引言,正文及结果结论中的中心语句加以提炼,便可形成一篇既独立于全文又能全面概括其主要内容的摘要."
+                style="
+                    width: 100%;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    overflow: hidden;
+                ">
+                中文摘要是科技论文的点睛之笔.目前科技论文的摘要往往存在三类主要问题,即研究背景性内容过多,没有研究目的及内容抽象空洞.修改此类摘要,首先要全面掌握文章主旨,然后运用一定的写作经验,对引言,正文及结果结论中的中心语句加以提炼,便可形成一篇既独立于全文又能全面概括其主要内容的摘要.中文摘要是科技论文的点睛之笔.目前科技论文的摘要往往存在三类主要问题,即研究背景性内容过多,没有研究目的及内容抽象空洞.修改此类摘要,首先要全面掌握文章主旨,然后运用一定的写作经验,对引言,正文及结果结论中的中心语句加以提炼,便可形成一篇既独立于全文又能全面概括其主要内容的摘要.
+            </div>
+        </div>
+        <div class="css-inner">
+            <div class="css-item">
+                红色光标：
+                <input
+                    type="text"
+                    autofocus
+                    style="
+                        width: 200px;
+                        padding-left: 14px;
+                        caret-color: red;
+                    ">
+            </div>
+        </div>
+        <div class="css-inner">
+            图片剪切：clip-path
+            <div class="css-item">
+                <img
+                    src="https://interactive-examples.mdn.mozilla.net/media/examples/balloon-small.jpg"
+                    width="100"
+                />
+                <img
+                    src="https://interactive-examples.mdn.mozilla.net/media/examples/balloon-small.jpg"
+                    width="100"
+                    style="
+                        clip-path: circle(40%);
+                        shape-outside: circle(40%);
+                    "
+                />
+                <img
+                    src="https://interactive-examples.mdn.mozilla.net/media/examples/balloon-small.jpg"
+                    width="100"
+                    style="
+                        clip-path: ellipse(80px 100px at 10% 20%);
+                        shape-outside: ellipse(80px 100px at 20% 20%);
+                    "
+                />
+                <img
+                    src="https://interactive-examples.mdn.mozilla.net/media/examples/balloon-small.jpg"
+                    width="100"
+                    style="
+                        clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+                        shape-outside: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+                    "
+                />
+            </div>
+        </div>
+        <div class="css-inner">
+            <div 
+                style="
+                    display: inline-block;
+                    width: 100px; 
+                    height: 100px; 
+                    background-color:gray;
+                "
+            >
+                <img 
+                    src="https://interactive-examples.mdn.mozilla.net/media/examples/plumeria.jpg"
+                    style="
+                        height: 100%; 
+                        width: 100%;
+                    " 
+                >
+            </div>
+            <div 
+                style="
+                    display: inline-block;
+                    width: 100px; 
+                    height: 100px; 
+                    background-color:gray;
+                "
+            >
+                <img 
+                    src="https://interactive-examples.mdn.mozilla.net/media/examples/plumeria.jpg"
+                    style="
+                        height: 100%; 
+                        width: 100%;
+                        object-fit: none;
+                    " 
+                >
+            </div>
+            <div 
+                style="
+                    display: inline-block;
+                    width: 100px; 
+                    height: 100px; 
+                    background-color:gray;
+                "
+            >
+                <img 
+                    src="https://interactive-examples.mdn.mozilla.net/media/examples/plumeria.jpg"
+                    style="
+                        height: 100%; 
+                        width: 100%;
+                        object-fit: contain;
+                    " 
+                >
+            </div>
+            <div 
+                style="
+                    display: inline-block;
+                    width: 100px; 
+                    height: 100px; 
+                    background-color:gray;
+                "
+            >
+                <img 
+                    src="https://interactive-examples.mdn.mozilla.net/media/examples/plumeria.jpg"
+                    style="
+                        height: 100%; 
+                        width: 100%;
+                        object-fit: fill;
+                        object-position: 20px 20px;
+                    " 
+                >
+            </div>
+        </div>
+        <div class="css-inner">
+            font-variant-caps: 可以控制大写字母特殊字符的使用
+            <p style="font-variant-caps: normal;">Difficult waffles</p>
+            <p style="font-variant-caps: small-caps;">Difficult waffles</p>
+            <p style="font-variant-caps: all-small-caps;">Difficult waffles</p>
+            <p style="font-variant-caps: petite-caps;">Difficult waffles</p>
+            <p style="font-variant-caps: all-petite-caps;">Difficult waffles</p>
+            <p style="font-variant-caps: unicase;">Difficult waffles</p>
+            <p style="font-variant-caps: titling-caps;">Difficult waffles</p>
+        </div>
+        <div class="css-inner">
+            writing-mode: 文本水平或垂直排布以及在块级元素中文本的书写方向
+            <p style="height: 80px; writing-mode: horizontal-tb;">1. 水平书写，从上(top)到下(bottom)书写</p>
+            <p style="height: 80px; writing-mode: vertical-rl;">2. 垂直书写，从右(right)向左(left)(古人书法就这么写的)</p>
+            <p style="height: 80px; writing-mode: vertical-lr;">3. 垂直书写，从左向右</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,3 +1,8 @@
+body {
+    height: 100vh;
+    overflow-y: auto;
+}
+
 /* 标题 */
 .main-head {
     text-align: center;
@@ -6,13 +11,16 @@
 }
 /* 案例列表 */
 .nav-list {
-    width: 1200px;
-    height: calc(100vh - 42px);
+    width: 90%;
     margin: 0 auto;
-    background-color: #f8f8f8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
 }
 .nav-item {
-    width: 20%;
+    width: 23%;
+    margin: 0 1%;
     display: inline-block;
     line-height: 2.4;
 }
@@ -26,6 +34,7 @@
     text-align: center;
     transition-duration: 0.3s;
     color: #404040;
+    background-color: #f8f8f8;
 }
 .nav-link:hover {
     border: 1px solid #52ccba;
