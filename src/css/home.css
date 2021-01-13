@@ -39,4 +39,31 @@ body {
 .nav-link:hover {
     border: 1px solid #52ccba;
     color: #52ccba;
+    animation: border-line 500ms ease-in-out 0ms;
+}
+@keyframes border-line {
+    0% {
+        border-top-color: #52ccba;
+        border-right-color: #eaeaea;
+        border-bottom-color: #eaeaea;
+        border-left-color: #eaeaea;
+    }
+    50% {
+        border-top-color: #52ccba;
+        border-right-color: #52ccba;
+        border-bottom-color: #eaeaea;
+        border-left-color: #eaeaea;
+    }
+    75% {
+        border-top-color: #52ccba;
+        border-right-color: #52ccba;
+        border-bottom-color: #52ccba;
+        border-left-color: #eaeaea;
+    }
+    100% {
+        border-top-color: #52ccba;
+        border-right-color: #52ccba;
+        border-bottom-color: #52ccba;
+        border-left-color: #52ccba;
+    }
 }
