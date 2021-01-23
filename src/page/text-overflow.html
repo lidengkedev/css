@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本溢出隐藏鼠标悬浮后展开显示详情</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        .container {
+            padding: 20px;
+            width: 500px;
+            margin: 0 auto;
+            border-bottom: 1px solid #eaeaea;
+            background-color: #f8f8f8;
+        }
+        .container .text-inner {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        .container .text-inner-line {
+            position: relative;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            white-space: normal;
+            transition-duration: 300ms;
+        }
+        .container .text-inner-line p {
+            padding: 0 5px;
+        }
+        .container .text-inner-line .icon-arrow {
+            width: 10px;
+            height: 10px;
+            padding: 5px;
+            border-left: 2px solid #808080;
+            border-bottom: 2px solid #808080;
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            z-index: 10;
+            transform: rotate(-45deg);
+            transition-duration: 300ms;
+            cursor: pointer;
+            background-color: transparent;
+        }
+        .container .text-inner-line:hover {
+            overflow: visible;
+            display: block;
+        }
+        .container .text-inner-line:hover .icon-arrow {
+            transform: rotate(135deg);
+        }
+        /* button */
+        .container .text-inner-button {
+            position: relative;
+        }
+        .container .text-inner-button p {
+            padding: 0 5px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            white-space: normal;
+            color: #808080;
+        }
+        .container .text-inner-button .icon-arrow-button {
+            width: 10px;
+            height: 10px;
+            padding: 5px;
+            border: none;
+            outline: none;
+            border-left: 2px solid #808080;
+            border-bottom: 2px solid #808080;
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            z-index: 10;
+            transform: rotate(-45deg);
+            transition-duration: 300ms;
+            cursor: pointer;
+            background-color: transparent;
+        }
+        .container .text-inner-button .icon-arrow-button:focus {
+            transform: rotate(135deg);
+        }
+        .container .text-inner-button .icon-arrow-button:focus ~ p {
+            display: block;
+            overflow: visible;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-inner">
+            天将降大任于斯人也，必先苦其心志，劳其筋骨，饿其体肤，空乏其身，行拂乱其所为，
+            所以动心忍性，增益其所不能。积土成山，风雨兴焉，积水成渊，蛟龙生焉，积善成德，
+            而神明自得，圣心备焉，故不积硅步，无以至千里，不积小流，无以成江河，骐骥一跃，
+            不能十步，驽马十驾，功在不舍。
+        </div>
+    </div>
+    <div class="container">
+        <div class="text-inner text-inner-line">
+            <p>
+                天将降大任于斯人也，必先苦其心志，劳其筋骨，饿其体肤，空乏其身，行拂乱其所为，
+                所以动心忍性，增益其所不能。积土成山，风雨兴焉，积水成渊，蛟龙生焉，积善成德，
+                而神明自得，圣心备焉，故不积硅步，无以至千里，不积小流，无以成江河，骐骥一跃，
+                不能十步，驽马十驾，功在不舍。
+            </p>
+            <span class="icon-arrow"></span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="text-inner text-inner-button">
+            <button class="icon-arrow-button"></button>
+            <p>
+                天将降大任于斯人也，必先苦其心志，劳其筋骨，饿其体肤，空乏其身，行拂乱其所为，
+                所以动心忍性，增益其所不能。积土成山，风雨兴焉，积水成渊，蛟龙生焉，积善成德，
+                而神明自得，圣心备焉，故不积硅步，无以至千里，不积小流，无以成江河，骐骥一跃，
+                不能十步，驽马十驾，功在不舍。
+            </p>
+        </div>
+    </div>
+</body>
+</html>
