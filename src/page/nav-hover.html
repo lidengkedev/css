@@ -75,6 +75,26 @@
             width: 112px;
             left: 672px;
         }
+        /* :hover::before */
+        .container.before .nav-warpper .nav-inner {
+            border: none;
+            background-color: transparent;
+        }
+        .container.before .nav-warpper .nav-inner {
+            position: relative;
+        }
+        .container.before .nav-warpper .nav-inner::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            border-bottom: 4px solid #52ccba;
+            transition-duration: 0.3s;
+        }
+        .container.before .nav-warpper .nav-inner:hover::before {
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -102,6 +122,18 @@
     </div>
     <div class="container">
         <div class="nav-warpper scroll">
+            <div class="nav-inner">首页</div>
+            <div class="nav-inner">新闻热点</div>
+            <div class="nav-inner">项目案例</div>
+            <div class="nav-inner">解决方案</div>
+            <div class="nav-inner">全网站建设</div>
+            <div class="nav-inner">产品与技术</div>
+            <div class="nav-inner">关于我们</div>
+            <div class="nav-scroll"></div>
+        </div>
+    </div>
+    <div class="container before">
+        <div class="nav-warpper">
             <div class="nav-inner">首页</div>
             <div class="nav-inner">新闻热点</div>
             <div class="nav-inner">项目案例</div>
