@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .link-inner {
+            width: 500px;
+            margin: 20px auto;
+        }
+        .link-text-decoration {
+            position: relative;
+            font-size: 14px;
+            text-decoration: none;
+            color: #a862ea;
+        }
+        .link-text-decoration::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 98%;
+            height: 2px;
+            background-color: #a862ea;
+            transition: transform .3s ease-in-out;
+        }
+        /* 左进右出 */
+        .link--left-to-right::after {
+            transform: scaleX(0);
+            transform-origin: bottom left;
+        }
+        .link--left-to-right:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom right;
+        }
+        /* 右进左出 */
+        .link--right-to-left::after {
+            transform: scaleX(0);
+            transform-origin: bottom right;
+        }
+        .link--right-to-left:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        /* 右进右出 */
+        .link--right-to-right::after {
+            transform: scaleX(0);
+            transform-origin: bottom right;
+        }
+        .link--right-to-right:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom right;
+        }
+        /* 左进左出 */
+        .link--left-to-left::after {
+            transform: scaleX(0);
+            transform-origin: bottom left;
+        }
+        .link--left-to-left:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        /* 由内到外 */
+        .link--inner-to-outside::after {
+            transform: scaleX(0);
+            transform-origin: bottom;
+        }
+        .link--inner-to-outside:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom;
+        }
+        /* 由外到内 */
+        .link--outside-to-inner::after {
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+        .link--outside-to-inner:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom;
+        }
+    </style>
+</head>
+<body>
+    <div class="link-inner">
+        <a href="#" class="link-text-decoration link--left-to-right">这是一段链接文字，文字下划线可以左进右出。</a>
+    </div>
+    <div class="link-inner">
+        <a href="#" class="link-text-decoration link--right-to-left">这是一段链接文字，文字下划线可以右进左出。</a>
+    </div>
+    <div class="link-inner">
+        <a href="#" class="link-text-decoration link--right-to-right">这是一段链接文字，文字下划线可以右进右出。</a>
+    </div>
+    <div class="link-inner">
+        <a href="#" class="link-text-decoration link--left-to-left">这是一段链接文字，文字下划线可以左进左出。</a>
+    </div>
+    <div class="link-inner">
+        <a href="#" class="link-text-decoration link--inner-to-outside">这是一段链接文字，文字下划线可以由内到外。</a>
+    </div>
+</body>
+</html>
